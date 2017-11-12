@@ -10,6 +10,12 @@ Setup ssh keys:
 	~$ eval "$(ssh-agent -s)"
 	~$ ssh-add ~/.ssh/id_rsa
 
+Install [git-subrepo](https://github.com/ingydotnet/git-subrepo):
+
+	~$ GIT_SUBREPO_ROOT=${HOME}/Aplicacions/git-subrepo
+	~$ git clone https://github.com/ingydotnet/git-subrepov $GIT_SUBREPO_ROOT
+	~$ export PATH=$GIT_SUBREPO_ROOT/lib:$PATH
+
 Deploy personal dotfiles:
 
 	~$ git clone git@github.com:zuzust/dotfiles $HOME/.dotfiles
