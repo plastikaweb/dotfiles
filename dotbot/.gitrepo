@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:anishathalye/dotbot.git
+	branch = master
+	commit = fe9ca6f5ede35d16f28e0c5db781fb39437fd171
+	parent = b67aa5262e49d705593524617077960698f76081
+	cmdver = 0.3.1
