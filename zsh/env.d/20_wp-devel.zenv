@@ -1,0 +1,8 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/zsh/env.d/20_wp-devel.zenv
+# Contents: WordPress Development Shared Env Variables
+
+
+export WP_DEVPATH="${HOME}/Projectes/wp/wp-sites"
+export WP_DBUSER="root"
+export WP_DBPASSWD="root"

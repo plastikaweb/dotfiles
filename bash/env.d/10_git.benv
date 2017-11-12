@@ -1,0 +1,11 @@
+# vim:ft=sh
+# File: $DOTFILES_PATH/bash/env.d/10_git.benv
+# Contents: Git Env Variables
+
+
+export GIT_SUBREPO_ROOT="${APPLICATIONS_PATH}/git-subrepo"
+export PATH="${GIT_SUBREPO_ROOT}/lib:$PATH"
+export MANPATH="${GIT_SUBREPO_ROOT}/man:$MANPATH"
+
+source ${GIT_SUBREPO_ROOT}/share/completion.bash
+

@@ -1,0 +1,9 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/zsh/env.d/10_node.zenv
+# Contents: Node Env Variables
+
+
+# Added by n-install (see http://git.io/n-install-repo)
+export N_PREFIX="$HOME/.n"
+export PATH="${N_PREFIX}/bin:${PATH}"
+

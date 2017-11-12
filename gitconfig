@@ -1,0 +1,36 @@
+# vim:ft=gitconfig
+# File: $DOTFILES_PATH/gitconfig
+
+[user]
+	name = Carles Muiños
+	email = carles.ml.dev@gmail.com
+
+[alias]
+        br = branch
+        ci = commit
+        co = checkout
+        st = status
+
+[core]
+	editor = vim
+
+[merge]
+	tool = vimdiff
+
+[color]
+	ui = auto
+
+[format]
+	pretty = format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ai) %C(bold blue)<%an>%Creset
+
+[push]
+	default = simple
+
+[status]
+	submoduleSummary = true
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

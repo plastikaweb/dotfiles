@@ -1,0 +1,6 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/zsh/aliases.d/npm.zal
+
+
+# NPM aliases
+alias nbin='PATH=$(npm bin):$PATH'

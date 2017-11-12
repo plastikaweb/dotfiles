@@ -1,0 +1,8 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/zsh/env.d/00_common.zenv
+# Contents: Development Shared Env Variables
+
+
+export DEVPATH=${HOME}/Projectes
+export CDPATH="${CDPATH}:${DEVPATH}"
+

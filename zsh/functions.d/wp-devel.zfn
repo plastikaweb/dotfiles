@@ -1,0 +1,191 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/zsh/functions.d/wp-devel.zfn
+
+
+_check_site() {
+  local site=""
+
+  if [[ ! -d "$1" ]]; then
+    site=$(basename $1)
+    echo "WordPress site \"${site}\" does not exist."
+    return 1
+  fi
+}
+
+
+_usage() {
+  echo "Usage:"
+  echo "  $1 -h"
+  echo "  $1 (-b | -r) site -[z]f (dump_file | pattern)"
+  echo
+  echo "Options:"
+  echo "  -h                      # Print usage information"
+  echo "  -b site                 # Backup site database"
+  echo "  -r site                 # Restore site database"
+  echo "  -z                      # Unzip compressed dump file"
+  echo "  -f dump_file | pattern  # Dump file name or name pattern"
+  echo
+  echo "Examples:"
+  echo "  $1 -b local.example.com -f db-yyyymmdd.sql"
+  echo "  $1 -r local.example.com -zf 87a4.zip"
+}
+
+
+wpdb() {
+  local db_action=""
+  local site=""
+  local site_path=""
+  local backups_path=""
+  local dump_file=""
+  local unzip=0
+
+  while getopts ":hb:r:zf:" opt; do
+    case $opt in
+      h)
+        _usage $0 && return 0
+        ;;
+      b)
+        db_action="backup"
+        site=$OPTARG
+        ;;
+      r)
+        db_action="restore"
+        site=$OPTARG
+        ;;
+      f)
+        dump_file=$OPTARG
+        ;;
+      z)
+        unzip=1
+        ;;
+      \?)
+        echo "Invalid option: -$OPTARG" >&2
+        return 1
+        ;;
+      :)
+        echo "Option -$OPTARG requires an argument." >&2
+        return 1
+        ;;
+    esac
+  done
+
+  if [[ (-z "$db_action") || (-z "$site") || (-z "$dump_file") ]]; then
+    _usage $0 && return 1
+  fi
+
+  site_path="${WP_DEVPATH}/public/${site}"
+  _check_site $site_path
+  [[ $? -ne 0 ]] && return 1
+
+  backups_path="${site_path}/wp-content/infinitewp/backups"
+
+  if [[ "$db_action" = "backup" ]]; then
+    [[ ! -d "$backups_path" ]] && mkdir -p $backups_path
+    mysqldump --host=$site \
+              --user=$WP_DBUSER \
+              --password=$WP_DBPASSWD \
+              --result-file="${backups_path}/${dump_file}" \
+              $site
+  else
+    dump_file=$(find $backups_path -name \*$dump_file\*)
+
+    if [[ $(echo "$dump_file" | wc -l) -ne 1 ]]; then
+      echo "Cannot find sql script file. Check filename uniqueness or existence."
+      return 1
+    fi
+
+    if [[ $unzip -eq 1 ]]; then
+      unzip -qq $dump_file -d $backups_path
+      dump_file=$(find $backups_path -name \*sql)
+    fi
+
+    mysql --host=$site \
+          --user=$WP_DBUSER \
+          --password=$WP_DBPASSWD \
+          --database=$site \
+          --execute=SOURCE\ $dump_file
+
+    rm -rf "${backups_path}/iwp_db"
+  fi
+}
+
+
+_sync_usage() {
+  echo "Usage:"
+  echo "  $1 -h"
+  echo "  $1 (-o | -d) site (-a | [-cu]) [-s]"
+  echo
+  echo "Options:"
+  echo "  -h       # Print usage information"
+  echo "  -o site  # Sync up local site (origin) -> remote site"
+  echo "  -d site  # Sync down remote site -> local site (destination)"
+  echo "  -a       # Sync wp-content/{themes,plugins,languages,uploads} folders"
+  echo "  -c       # Sync wp-content/uploads [c]ontent folder"
+  echo "  -u       # Sync wp-content/{themes,plugins,languages} [u]pdatable folders"
+  echo "  -s       # Simulate synchronization"
+  echo
+  echo "Examples:"
+  echo "  $1 -o local.example.com -a"
+  echo "  $1 -d local.example.com -us"
+}
+
+
+wpsync() {
+  local site=""
+  local site_path=""
+  local wm_flags=""
+  local wm_action=""
+  local wm_all=0
+  local sync_path="${WP_DEVPATH}/sync"
+
+  while getopts ":hacuso:d:" opt; do
+    case $opt in
+      h)
+        _sync_usage $0 && return 0
+        ;;
+      o)
+        wm_action="push"
+        site=$OPTARG
+        ;;
+      d)
+        wm_action="pull"
+        site=$OPTARG
+        ;;
+      a)
+        wm_flags="utpl"
+        wm_all=1
+        ;;
+      u)
+        [[ $wm_all -ne 1 ]] && wm_flags="${wm_flags}tpl"
+        ;;
+      c)
+        [[ $wm_all -ne 1 ]] && wm_flags="${wm_flags}u"
+        ;;
+      s)
+        wm_flags="${wm_flags}s"
+        ;;
+      \?)
+        echo "Invalid option: -$OPTARG" >&2
+        return 1
+        ;;
+      :)
+        echo "Option -$OPTARG requires an argument." >&2
+        return 1
+        ;;
+    esac
+  done
+
+  if [[ (-z "$site") || (-z "$wm_flags") ]]; then
+    _sync_usage $0 && return 1
+  fi
+
+  site_path="${WP_DEVPATH}/public/${site}"
+
+  _check_site $site_path
+  [[ $? -ne 0 ]] && return 1
+
+  lpwd=$PWD
+  cd $WP_DEVPATH \
+  && wordmove $wm_action -c $sync_path/$site -$wm_flags \
+  && cd $lpwd
+}

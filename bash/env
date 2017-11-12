@@ -1,0 +1,15 @@
+# vim:ft=sh
+# File: $DOTFILES_PATH/bash/env
+# Contents: Values used by other scripts and applications
+
+
+# Applying env files
+envs_folder="$BASH_DOTFILES_PATH/env.d"
+
+for f in $envs_folder/*; do
+	[[ -f "$f" ]] || continue
+	. $f
+done
+
+unset envs_folder
+
