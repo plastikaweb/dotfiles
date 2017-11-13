@@ -5,9 +5,9 @@
     force: true
 
 - shell:
-  - [mkdir -p ~/Aplicacions, Creating applications directory]
-  - [mkdir -p ~/.bin, Creating user bin directory]
-  - [cp ~/.bashrc ~/.bashrc~, Backup of bash config file]
+  - [mkdir -p ~/Aplicacions, Creating applications directory...]
+  - [mkdir -p ~/.bin, Creating user bin directory...]
+  - [cp ~/.bashrc ~/.bashrc~, Backup of bash config file...]
 
 - clean: ['~']
 
@@ -16,3 +16,15 @@
   ~/.zshrc: zshrc
   ~/.gitconfig: gitconfig
   ~/.local/share/gnome-shell/extensions: local/share/gnome-shell/extensions
+  ~/.atom/config.cson: atom/config.cson
+  ~/.atom/github.cson: atom/github.cson
+  ~/.atom/linter-config.json: atom/linter-config.json
+  ~/.atom/projects.cson: atom/projects.cson
+
+- shell:
+  - [source ~/.bashrc, Sourcing bash configuration...]
+  - [~/.dotfiles/docker/docker-install.sh, Installing docker...]
+  - [~/.dotfiles/docker/docker-compose-install.sh, Installing docker compose...]
+  - [~/.dotfiles/git/git-lfs-install.sh, Installing git lfs...]
+  - [~/.dotfiles/n/n-install.sh, Installing n (node version manager)...]
+  - [~/.dotfiles/rbenv/rbenv-install.sh, Installing rbenv (ruby version manager)...]
