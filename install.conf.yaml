@@ -1,3 +1,18 @@
-- clean: []
-- link: {}
-- shell: []
+- defaults:
+  link:
+    create: true
+    relink: true
+    force: true
+
+- shell:
+  - [mkdir -p ~/Aplicacions, Creating applications directory]
+  - [mkdir -p ~/.bin, Creating user bin directory]
+  - [cp ~/.bashrc ~/.bashrc~, Backup of bash config file]
+
+- clean: ['~']
+
+- link:
+  ~/.bashrc: bashrc
+  ~/.zshrc: zshrc
+  ~/.gitconfig: gitconfig
+  ~/.local/share/gnome-shell/extensions: local/share/gnome-shell/extensions
