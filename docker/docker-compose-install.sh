@@ -12,7 +12,7 @@ chmod +x ${APPLICATIONS_PATH}/docker-compose/docker-compose
 curl -L https://raw.githubusercontent.com/docker/compose/1.17.1/contrib/completion/zsh/_docker-compose > ${DOTFILES_PATH}/zsh/completion.d/_docker-compose
 
 # Test the installation
-docker-compose --version
+echo Test the installation running docker-compose --version
 
 
 # vim:ft=sh
