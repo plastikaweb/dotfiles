@@ -1,1 +1,9 @@
-[]
+[
+  {
+    title: "www.pareudepararme.org"
+    group: "websites"
+    paths: [
+      "/home/carles/Projectes/websites/www.pareudepararme.org"
+    ]
+  }
+]
