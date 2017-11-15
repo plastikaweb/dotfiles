@@ -23,6 +23,7 @@
 
 - shell:
   - [source ~/.bashrc, Sourcing bash configuration...]
+  - [~/.dotfiles/fonts/fonts-install.sh, Installing fonts...]
   - [~/.dotfiles/docker/docker-install.sh, Installing docker...]
   - [~/.dotfiles/docker/docker-compose-install.sh, Installing docker compose...]
   - [~/.dotfiles/git/git-lfs-install.sh, Installing git lfs...]
