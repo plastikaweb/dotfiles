@@ -6,4 +6,25 @@
       "/home/carles/Projectes/websites/www.pareudepararme.org"
     ]
   }
+  {
+    title: "Vuejs Poster Shop"
+    group: "play-vue"
+    paths: [
+      "/home/carles/Learning/Vue/Courses/2017-udemy/ultimate-vue2-developers-course/code/vuejs-poster-shop"
+    ]
+  }
+  {
+    title: "Play Loopback"
+    group: "play-loopback"
+    paths: [
+      "/home/carles/Learning/Node/Courses/2017-egghead/build-rest-api-loopback/code/play-loopback"
+    ]
+  }
+  {
+    title: "Manifest Api"
+    group: "loopback"
+    paths: [
+      "/home/carles/Projectes/loopback/manifest-api"
+    ]
+  }
 ]
