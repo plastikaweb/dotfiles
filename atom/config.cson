@@ -1,4 +1,9 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "4e1c1dc4-dcf0-444f-be8c-a91a4bb04dbf"
+    html:
+      indent_size: 4
   "atom-material-ui":
     tabs:
       compactTabs: true
