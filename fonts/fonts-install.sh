@@ -30,7 +30,7 @@ tar -C ${MSFONTS_DIR} -xzf ${MSFONTS_FILE1} \
     && chmod 644 ${MSFONTS_DIR}/*
 
 sudo apt install cabextract
-sudo dpkg -i ${MSTTFONTS_FILE2}
+sudo dpkg -i ${MSFONTS_FILE2}
 
 # Update fonts cache
 fc-cache -fv
