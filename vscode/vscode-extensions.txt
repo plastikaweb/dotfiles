@@ -7,7 +7,10 @@ HookyQR.beautify
 PeterJausovec.vscode-docker
 Zignd.html-css-class-completion
 abusaidm.html-snippets
+alefragnani.Bookmarks
 alefragnani.project-manager
+alexdima.copy-relative-path
+christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
 dbaeumer.vscode-eslint
 eg2.tslint
@@ -23,6 +26,9 @@ msjsdiag.debugger-for-chrome
 natewallace.angular2-inline
 octref.vetur
 robertohuertasm.vscode-icons
+sdras.vue-vscode-extensionpack
+sdras.vue-vscode-snippets
+wmaurer.vscode-jumpy
 xabikos.JavaScriptSnippets
 yzane.markdown-pdf
 yzhang.markdown-all-in-one
