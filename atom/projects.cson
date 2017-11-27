@@ -21,10 +21,10 @@
     ]
   }
   {
-    title: "Manifest Api"
+    title: "Manifesto's Api"
     group: "loopback"
     paths: [
-      "/home/carles/Projectes/loopback/manifest-api"
+      "/home/carles/Projectes/loopback/manifesto-api"
     ]
   }
 ]
