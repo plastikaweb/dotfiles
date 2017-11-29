@@ -6,11 +6,11 @@
 	email = carles.ml.dev@gmail.com
 
 [alias]
-  br = branch
-  ci = commit
-  co = checkout
-  st = status
-	lg = log --graph
+ 	br = branch
+	ci = commit
+	co = checkout
+	st = status
+	lg = log -20 --graph
 
 [core]
 	editor = vim
