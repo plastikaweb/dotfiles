@@ -1,0 +1,7 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/.zsh/env.d/10_direnv.zenv
+# Contents: Direnv Setup
+
+
+eval "$(direnv hook zsh)"
+

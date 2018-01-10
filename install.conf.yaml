@@ -29,3 +29,4 @@
   - [~/.dotfiles/git/git-lfs-install.sh, Installing git lfs...]
   - [~/.dotfiles/n/n-install.sh, Installing n (node version manager)...]
   - [~/.dotfiles/rbenv/rbenv-install.sh, Installing rbenv (ruby version manager)...]
+  - [sudo apt install direnv, Installing direnv...]
