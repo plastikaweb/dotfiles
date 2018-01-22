@@ -21,10 +21,10 @@
     ]
   }
   {
-    title: "Manifesto's Api"
-    group: "loopback"
+    title: "Decidim Barcelona Organizations"
+    group: "rails"
     paths: [
-      "/home/carles/Projectes/loopback/manifesto-api"
+      "/home/carles/Projectes/rails/decidim-org/decidim-barcelona-organizations"
     ]
   }
 ]
