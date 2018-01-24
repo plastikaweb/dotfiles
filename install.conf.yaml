@@ -20,7 +20,7 @@
   ~/.atom/github.cson: atom/github.cson
   ~/.atom/linter-config.json: atom/linter-config.json
   ~/.atom/projects.cson: atom/projects.cson
-  
+
 - shell:
   - [source ~/.bashrc, Sourcing bash configuration...]
   - [~/.dotfiles/fonts/fonts-install.sh, Installing fonts...]
@@ -30,5 +30,6 @@
   - [~/.dotfiles/n/n-install.sh, Installing n (node version manager)...]
   - [~/.dotfiles/rbenv/rbenv-install.sh, Installing rbenv (ruby version manager)...]
   - [~/.dotfiles/insomnia/insomnia-install.sh, Installing insomnia (REST client)...]
+  - [~/.dotfiles/ngrok/ngrok-install.sh, Installing ngrok (public URLs for local web servers)...]
   - [sudo apt install direnv, Installing direnv (env variables manager)...]
   - [sudo apt install httpie, Installing httpie (HTTP CLI)...]
