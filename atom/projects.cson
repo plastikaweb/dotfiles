@@ -27,4 +27,11 @@
       "/home/carles/Projectes/rails/decidim-org/decidim-barcelona-organizations"
     ]
   }
+  {
+    title: "Ta Frontoffice"
+    group: "angular"
+    paths: [
+      "/home/carles/Projectes/angular/ta-frontoffice"
+    ]
+  }
 ]
