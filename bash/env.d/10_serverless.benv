@@ -1,0 +1,12 @@
+# vim:ft=sh
+# File: $DOTFILES_PATH/bash/env.d/10_serverless.benv
+# Contents: Serverless completion
+
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /home/carles/.n/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /home/carles/.n/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
+
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /home/carles/.n/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /home/carles/.n/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
