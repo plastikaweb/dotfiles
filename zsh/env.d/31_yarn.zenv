@@ -1,0 +1,8 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/zsh/env.d/31_yarn.zenv
+# Contents: Yarn Env Variables
+
+
+# See: https://yarnpkg.com/en/docs/cli/global
+export PATH="$(yarn global bin):${PATH}"
+

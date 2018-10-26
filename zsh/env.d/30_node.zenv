@@ -1,5 +1,5 @@
 # vim:ft=zsh
-# File: $DOTFILES_PATH/zsh/env.d/10_node.zenv
+# File: $DOTFILES_PATH/zsh/env.d/30_node.zenv
 # Contents: Node Env Variables
 
 

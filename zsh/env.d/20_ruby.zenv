@@ -1,5 +1,5 @@
 # vim:ft=zsh
-# File: $DOTFILES_PATH/.zsh/env.d/10_ruby.zenv
+# File: $DOTFILES_PATH/.zsh/env.d/20_ruby.zenv
 # Contents: Ruby Env Variables
 
 

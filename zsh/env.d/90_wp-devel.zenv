@@ -1,5 +1,5 @@
 # vim:ft=zsh
-# File: $DOTFILES_PATH/zsh/env.d/20_wp-devel.zenv
+# File: $DOTFILES_PATH/zsh/env.d/90_wp-devel.zenv
 # Contents: WordPress Development Shared Env Variables
 
 
