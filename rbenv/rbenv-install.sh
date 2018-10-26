@@ -49,6 +49,8 @@ gem install bundler --no-document
 # Configuring Bundler for faster, parallel gem installation ...
 number_of_cores=$(nproc)
 bundle config --global jobs $((number_of_cores - 1))
+bundle config --global path .bundle
+bundle config --global bin .bundle/bin
 
 
 # vim:ft=sh
