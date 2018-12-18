@@ -1,41 +1,21 @@
 "*":
-  "atom-beautify":
-    general:
-      _analyticsUserId: "4e1c1dc4-dcf0-444f-be8c-a91a4bb04dbf"
-    html:
-      indent_size: 4
-  "atom-material-ui":
-    tabs:
-      compactTabs: true
-      noTabMinWidth: true
-    ui:
-      panelContrast: true
-      panelShadows: true
+  "atom-ide-ui":
+    use: {}
   core:
     autoHideMenuBar: true
-    closeDeletedFileTabs: true
-    disabledPackages: [
-      "linter"
-    ]
-    openEmptyEditorOnStart: false
-    projectHome: "/home/carles/Projectes"
-    telemetryConsent: "limited"
+    telemetryConsent: "no"
     themes: [
       "atom-material-ui"
       "atom-material-syntax"
     ]
-  editor:
-    autoIndentOnPaste: false
-    showIndentGuide: true
+  editor: {}
   "exception-reporting":
-    userId: "8792d15f-8aaa-4eef-afc8-0c5597d2244d"
+    userId: "39017e1d-2d2f-439f-8a05-0236ed3b4af1"
+  "linter-ui-default":
+    showPanel: true
   minimap:
     plugins:
       cursorline: true
       cursorlineDecorationsZIndex: 0
-  "prettier-atom":
-    prettierOptions:
-      singleQuote: true
-    useEslint: true
   welcome:
     showOnStartup: false
