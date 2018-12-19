@@ -5,6 +5,11 @@ Install git and some other tools we'd like to use:
 	~$ sudo apt update
 	~$ sudo apt install zsh vim git
 
+Install snap in your system if not installed yet
+
+	~$ snap version
+	~$ sudo apt install snapd
+
 Setup ssh keys:
 
 	~$ eval "$(ssh-agent -s)"
@@ -25,4 +30,3 @@ Link it all to $HOME:
 	~$ $HOME/.dotfiles/install
 
 Reference: https://github.com/anishathalye/dotbot
-
