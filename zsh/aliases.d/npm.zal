@@ -3,4 +3,4 @@
 
 
 # NPM aliases
-alias nbin='PATH=$(npm bin):$PATH'
+# alias nbin='PATH=$(npm bin):$PATH'

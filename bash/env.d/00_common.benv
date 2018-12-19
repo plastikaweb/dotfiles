@@ -11,8 +11,7 @@ export PATH="${HOME}/.bin:${PATH}"
 export RELEASE=$( lsb_release -c | awk '{ print $2 }' )
 
 export EDITOR="vim"
-export XEDITOR="atom"
+export XEDITOR="code"
 
 export DIFF_TOOL="vimdiff"
 export XDIFF_TOOL="meld"
-

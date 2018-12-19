@@ -39,8 +39,8 @@
 #             Use diffeditor for merging conflicts  => |git config --global merge.tool vimdiff|
 #             Sets email for current repo => |git config user.email "user@example.com"|
 #             Sets log format                    => |git config --global format.pretty format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset|
-#             Sets an alias for mylog log format => |git config --global alias.mylog "log --pretty=format:'%h %s [%an]' --graph|
-#             Sets an alias for lol log format   => |git config --global alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all|
+#             Sets an # alias for mylog log format => |git config --global # alias.mylog "log --pretty=format:'%h %s [%an]' --graph|
+#             Sets an # alias for lol log format   => |git config --global # alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all|
 # git add:    You can also type |git add .|. The dot represents the current directory, so everything in it, and everything beneath it gets added.
 # git diff:   Show unstaged differences since last commit. To see staged differences use |git diff --staged|
 #             |git diff HEAD^| shows differences since the parent of the latest commit
@@ -111,7 +111,7 @@
 # $ git checkout master
 # $ git merge branch
 
-## If conflicts three options: 
+## If conflicts three options:
 # -------------------------------------
 # Fix merge conflicts and
 # $ git add files
@@ -125,75 +125,75 @@
 
 
 ## Git aliases
-alias gth='git help'        # gth [cmd]
-alias gti='git init'
-alias gtcf='git config'		# gtcf user.email
-alias gtcfl='git config --list'
+# alias gth='git help'        # gth [cmd]
+# alias gti='git init'
+# alias gtcf='git config'		# gtcf user.email
+# alias gtcfl='git config --list'
 
-alias gts='git status'
+# alias gts='git status'
 
-alias gta='git add'		    # gta (file1..fileN|'*suffix'|.|--all)
-alias gtsh='git stash'      # gtsh [list|show|drop|pop|apply|clear]
+# alias gta='git add'		    # gta (file1..fileN|'*suffix'|.|--all)
+# alias gtsh='git stash'      # gtsh [list|show|drop|pop|apply|clear]
 
-alias gtc='git commit -v'	# gtc [-qa] -m "Add LICENSE file"
-alias gtca='git commit -v --amend'	# gtca -m "New commit message"
+# alias gtc='git commit -v'	# gtc [-qa] -m "Add LICENSE file"
+# alias gtca='git commit -v --amend'	# gtca -m "New commit message"
 
-alias gtr='git reset'
-alias gtrf='git reset HEAD' # gtrf file
-alias gtrs='git reset --soft HEAD^'
-alias gtrh='git reset --hard HEAD^'
+# alias gtr='git reset'
+# alias gtrf='git reset HEAD' # gtrf file
+# alias gtrs='git reset --soft HEAD^'
+# alias gtrh='git reset --hard HEAD^'
 
-alias gtrm='git rm'				# gtrm ([-r] folder|file|'*.txt') => deletes from filesystem and untracks
-alias gtrmc='git rm --cached'	# gtrmc ([-r] folder|file|'*.log') => untracks only without deletion
+# alias gtrm='git rm'				# gtrm ([-r] folder|file|'*.txt') => deletes from filesystem and untracks
+# alias gtrmc='git rm --cached'	# gtrmc ([-r] folder|file|'*.log') => untracks only without deletion
 
-alias gtco='git checkout'	# gtco (tag|[-b] branch)
-alias gtcof='git checkout --' # gtcof file
+# alias gtco='git checkout'	# gtco (tag|[-b] branch)
+# alias gtcof='git checkout --' # gtcof file
 
-alias gtrmt='git remote'       # gtrmt -v
-alias gtrmta='git remote add'  # gtrmta name address
-alias gtrmtr='git remote rm'   # gtrmtr name
-alias gtrmts='git remote show' # gtrmts name
-alias gtrmtp='git remote prune' # gtrmtp name => to clean up deleted remote branches
+# alias gtrmt='git remote'       # gtrmt -v
+# alias gtrmta='git remote add'  # gtrmta name address
+# alias gtrmtr='git remote rm'   # gtrmtr name
+# alias gtrmts='git remote show' # gtrmts name
+# alias gtrmtp='git remote prune' # gtrmtp name => to clean up deleted remote branches
 
-alias gtcl='git clone'		# gtcl address [name]
-alias gtpll='git pull'      # gtpll [name branch]
-alias gtpsh='git push'		# gtpsh [[-u] name branch]
+# alias gtcl='git clone'		# gtcl address [name]
+# alias gtpll='git pull'      # gtpll [name branch]
+# alias gtpsh='git push'		# gtpsh [[-u] name branch]
 							# gtpsh name :branch => deletes remote branch
 							# gtpsh name local_branch:remote_branch
-alias gtfch='git fetch'		# gtfch [name branch]
-alias gtrbs='git rebase'	# gtrbs [branch]
-alias gtm='git merge'		# gtm branch
+# alias gtfch='git fetch'		# gtfch [name branch]
+# alias gtrbs='git rebase'	# gtrbs [branch]
+# alias gtm='git merge'		# gtm branch
 
-alias gtb='git branch'
-alias gtbr='git branch -r'
-alias gtbd='git branch -d'	# gtbd branch
-alias gtbd!='git branch -D'	# gtbd! branch
+# alias gtb='git branch'
+# alias gtbr='git branch -r'
+# alias gtbd='git branch -d'	# gtbd branch
+# alias gtbd!='git branch -D'	# gtbd! branch
 
-alias gttg='git tag'
-alias gttga='git tag -a'	# gttga v0.0.3 [-m "version 0.0.3"]
-alias gttgp='git push --tags'
+# alias gttg='git tag'
+# alias gttga='git tag -a'	# gttga v0.0.3 [-m "version 0.0.3"]
+# alias gttgp='git push --tags'
 
-alias gtl='git log'         # gtl [--oneline|--pretty=oneline|--pretty=format:"%h %ad- %s [%an]"]
-alias gtls='git log --oneline --summary'
-alias gtlp='git log --oneline -p'
-alias gtlst='git log --oneline --stat'
-alias gtlg='git log --oneline --graph'
-alias gtlh='git log --since=1.hour.ago'
-alias gtld='git log --since=1.day.ago' # git log [--until=1.minute.ago|--since=1.month.ago --until=2.weeks.ago|--since=2000-01-01 --until=2012-12-31]
-alias gtlw='git log --since=1.week.ago'
-alias gtlm='git log --since=1.month.ago'
-alias gtl5='git log -5'
-alias gtl10='git log -10'
-alias gtl25='git log -25'
-alias gtl50='git log -50'
+# alias gtl='git log'         # gtl [--oneline|--pretty=oneline|--pretty=format:"%h %ad- %s [%an]"]
+# alias gtls='git log --oneline --summary'
+# alias gtlp='git log --oneline -p'
+# alias gtlst='git log --oneline --stat'
+# alias gtlg='git log --oneline --graph'
+# alias gtlh='git log --since=1.hour.ago'
+# alias gtld='git log --since=1.day.ago' # git log [--until=1.minute.ago|--since=1.month.ago --until=2.weeks.ago|--since=2000-01-01 --until=2012-12-31]
+# alias gtlw='git log --since=1.week.ago'
+# alias gtlm='git log --since=1.month.ago'
+# alias gtl5='git log -5'
+# alias gtl10='git log -10'
+# alias gtl25='git log -25'
+# alias gtl50='git log -50'
 
-alias gtd='git diff'			# gtd [HEAD|commit..commit|branch..branch]
-alias gtdl='git diff HEAD~1'
-alias gtdh='git diff --since=1.hour.ago'
-alias gtdd='git diff --since=1.day.ago' # git diff [--until=1.minute.ago|--since=1.month.ago --until=2.weeks.ago|--since=2000-01-01 --until=2012-12-31]
-alias gtds='git diff --staged'
-alias gtdc='git diff --cached'
+# alias gtd='git diff'			# gtd [HEAD|commit..commit|branch..branch]
+# alias gtdl='git diff HEAD~1'
+# alias gtdh='git diff --since=1.hour.ago'
+# alias gtdd='git diff --since=1.day.ago' # git diff [--until=1.minute.ago|--since=1.month.ago --until=2.weeks.ago|--since=2000-01-01 --until=2012-12-31]
+# alias gtds='git diff --staged'
+# alias gtdc='git diff --cached'
 
-alias gtbl='git blame'		# gtbl file --date short
+# alias gtbl='git blame'		# gtbl file --date short
 
-alias ungit="find . -name '.git' -exec rm -rf '{}' \;"
+# alias ungit="find . -name '.git' -exec rm -rf '{}' \;"

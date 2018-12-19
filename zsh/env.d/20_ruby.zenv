@@ -3,7 +3,6 @@
 # Contents: Ruby Env Variables
 
 
-export PATH="${HOME}/.rbenv/bin:${PATH}"
+# export PATH="${HOME}/.rbenv/bin:${PATH}"
 
-eval "$(rbenv init - zsh --no-rehash)"
-
+# eval "$(rbenv init - zsh --no-rehash)"

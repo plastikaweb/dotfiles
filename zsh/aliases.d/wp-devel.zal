@@ -3,16 +3,16 @@
 
 
 ## Please aliases
-alias wpnew='please create wordpress'
-alias wpdel='please delete'
+# alias wpnew='please create wordpress'
+# alias wpdel='please delete'
 
 ## Vagrant aliases
-alias wpup='sudo ufw disable > /dev/null 2>&1 && vagrant up'
-alias wpdown='vagrant halt && sudo ufw enable > /dev/null 2>&1'
-alias wpreload='vagrant reload'
-alias wpstart='vagrant resume'
-alias wpstop='vagrant suspend'
-alias wpstatus='vagrant status'
-alias wplogin='vagrant login'
-alias wpshare='vagrant share'
-alias wpssh='vagrant ssh'
+# alias wpup='sudo ufw disable > /dev/null 2>&1 && vagrant up'
+# alias wpdown='vagrant halt && sudo ufw enable > /dev/null 2>&1'
+# alias wpreload='vagrant reload'
+# alias wpstart='vagrant resume'
+# alias wpstop='vagrant suspend'
+# alias wpstatus='vagrant status'
+# alias wplogin='vagrant login'
+# alias wpshare='vagrant share'
+# alias wpssh='vagrant ssh'
