@@ -6,6 +6,7 @@
 [subrepo]
 	remote = git@github.com:anishathalye/dotbot.git
 	branch = master
-	commit = fe9ca6f5ede35d16f28e0c5db781fb39437fd171
-	parent = b67aa5262e49d705593524617077960698f76081
-	cmdver = 0.3.1
+	commit = 5d74f29001894d07a0a88724138d13972ac36023
+	parent = 411912b658d82d7d6f5ebd4b9a119ba12e302836
+	cmdver = 0.4.0
+	method = merge
