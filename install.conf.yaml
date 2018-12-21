@@ -12,9 +12,9 @@
 - clean: ['~']
 
 - link:
-  ~/.bashrc: bashrc
-  ~/.zshrc: zshrc
-  ~/.gitconfig: gitconfig
+    ~/.bashrc: bashrc
+    ~/.zshrc: zshrc
+    ~/.gitconfig: gitconfig
 
 - shell:
   - [source ~/.bashrc, Sourcing bash configuration...]
