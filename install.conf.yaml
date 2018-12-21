@@ -1,8 +1,8 @@
 - defaults:
-  link:
-    create: true
-    relink: true
-    force: true
+    link:
+      create: true
+      relink: true
+      force: true
 
 - shell:
   - [mkdir -p ~/Aplicacions, Creating applications directory...]
