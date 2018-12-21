@@ -33,6 +33,7 @@
   - [~/.dotfiles/ngrok/ngrok-install.sh, Installing ngrok (public URLs for local web servers)...]
   - [~/.dotfiles/vscode/vscode-install.sh, Installing visual studio code (code editor)...]
   - [~/.dotfiles/wavebox/wavebox-install.sh, Installing wavebox (cloud client)...]
+  - [~/.dotfiles/yarn/yarn-install.sh, Installing yarn (node package manager)...]
   - [~/.dotfiles/zulip/zulip-install.sh, Installing zulip (chat app)...]
 
 - shell:
