@@ -38,7 +38,9 @@
 
 - shell:
   - [sudo apt install -y direnv, Installing direnv (env variables manager)...]
+  - [sudo apt install -y ecryptfs-utils, Installing ecryptfs-utils (cryptographic filesystem)...]
   - [sudo apt install -y htop, Installing htop (interactive processes viewer)...]
   - [sudo apt install -y httpie, Installing httpie (HTTP CLI)...]
   - [sudo apt install -y magic-wormhole, Installing wormhole (secure p2p data transfer)...]
   - [sudo apt install -y tree, Installing tree (displays an indented directory tree, in color)...]
+  - [sudo apt install -y wipe, Installing wipe (secure file deletion)...]
