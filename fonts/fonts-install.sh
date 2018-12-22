@@ -20,17 +20,25 @@ ROBOTOFONTS_FILE=${DOTFILES_PATH}/fonts/Roboto.tar.gz
 tar -C ${ROBOTOFONTS_DIR} -xzf ${ROBOTOFONTS_FILE} \
     && chmod 644 ${ROBOTOFONTS_DIR}/*
 
+# Install FiraCode fonts
+FIRACODEFONTS_DIR=${TTFONTS_DIR}/fira-code
+FIRACODEFONTS_FILE=${DOTFILES_PATH}/fonts/FiraCode.tar.gz
+
+[[ ! -d "${FIRACODEFONTS_DIR}" ]] && mkdir -m 755 -p ${FIRACODEFONTS_DIR}
+tar -C ${FIRACODEFONTS_DIR} -xzf ${FIRACODEFONTS_FILE} \
+    && chmod 644 ${FIRACODEFONTS_DIR}/*
+
 # Install MS fonts
 MSFONTS_DIR=${TTFONTS_DIR}/msttfonts
 MSFONTS_FILE1=${DOTFILES_PATH}/fonts/MSfonts.tar.gz
-MSFONTS_FILE2=${DOTFILES_PATH}/fonts/ttf-mscorefonts-installer_3.6_all.deb
+# MSFONTS_FILE2=${DOTFILES_PATH}/fonts/ttf-mscorefonts-installer_3.6_all.deb
 
 [[ ! -d "${MSFONTS_DIR}" ]] && mkdir -m 755 -p ${MSFONTS_DIR}
 tar -C ${MSFONTS_DIR} -xzf ${MSFONTS_FILE1} \
     && chmod 644 ${MSFONTS_DIR}/*
 
-sudo apt install cabextract
-sudo dpkg -i ${MSFONTS_FILE2}
+echo sudo apt install -y cabextract ttf-mscorefonts-installer
+# sudo dpkg -i ${MSFONTS_FILE2}
 
 # Update fonts cache
 fc-cache -fv
