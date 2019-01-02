@@ -1,0 +1,5 @@
+{
+  "installPackageCommand": "yarn add {packageName}",
+  "node": "~/.n/bin/node",
+  "pro": false
+}

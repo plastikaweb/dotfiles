@@ -15,6 +15,7 @@
     ~/.bashrc: bashrc
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
+    ~/.quokka: quokka
 
 - shell:
   - [source ~/.bashrc, Sourcing bash configuration...]
