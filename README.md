@@ -2,31 +2,31 @@
 
 Install git and some other tools we'd like to use:
 
-	~$ sudo apt update
-	~$ sudo apt install zsh vim git
+    ~$ sudo apt update
+    ~$ sudo apt install zsh vim git
 
 Install snap in your system if not installed yet
 
-	~$ snap version
-	~$ sudo apt install snapd
+    ~$ snap version
+    ~$ sudo apt install snapd
 
 Setup ssh keys:
 
-	~$ eval "$(ssh-agent -s)"
-	~$ ssh-add ~/.ssh/id_rsa
+    ~$ eval "$(ssh-agent -s)"
+    ~$ ssh-add ~/.ssh/id_rsa
 
 Install [git-subrepo](https://github.com/ingydotnet/git-subrepo):
 
-	~$ GIT_SUBREPO_ROOT=${HOME}/Aplicacions/git-subrepo
-	~$ git clone https://github.com/ingydotnet/git-subrepov $GIT_SUBREPO_ROOT
-	~$ export PATH=$GIT_SUBREPO_ROOT/lib:$PATH
+    ~$ GIT_SUBREPO_ROOT=${HOME}/Aplicacions/git-subrepo
+    ~$ git clone https://github.com/ingydotnet/git-subrepov $GIT_SUBREPO_ROOT
+    ~$ export PATH=$GIT_SUBREPO_ROOT/lib:$PATH
 
 Deploy personal dotfiles:
 
-	~$ git clone git@github.com:zuzust/dotfiles $HOME/.dotfiles
+    ~$ git clone git@github.com:zuzust/dotfiles $HOME/.dotfiles
 
-Link it all to $HOME:
+Link it all to \$HOME:
 
-	~$ $HOME/.dotfiles/install
+    ~$ $HOME/.dotfiles/install
 
 Reference: https://github.com/anishathalye/dotbot
