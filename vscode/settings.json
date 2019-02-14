@@ -1,0 +1,116 @@
+{
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "plaintext",
+    "markdown",
+    "vue",
+    "liquid",
+    "HTML (Eex)"
+  ],
+  "bookmarks.useWorkaroundForFormatters": true,
+  "codestream.email": "carles.muinos@adakode.org",
+  "codestream.showMarkers": true,
+  "cSpell.enabledLanguageIds": ["markdown", "plaintext", "text"],
+  "cSpell.language": "en,ca",
+  "cSpell.words": [
+    "Adakode",
+    "adakode",
+    "adakodecoop",
+    "laklau",
+    "plastikaweb",
+    "zuzudev",
+    "Klaudia",
+    "Matheu",
+    "Muiños",
+    "Onboarding"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.fontFamily": "'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "alt",
+  "editor.tabSize": 2,
+  "emojisense.emojiDecoratorsEnabled": false,
+  "emojisense.showOnColon": false,
+  "emojisense.unicodeCompletionsEnabled": false,
+  "eslint.autoFixOnSave": true,
+  "eslint.packageManager": "yarn",
+  "eslint.validate": [
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "javascript",
+      "autoFix": true
+    }
+  ],
+  "extensions.ignoreRecommendations": true,
+  "extensions.showRecommendationsOnlyOnDemand": true,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/.js": {
+      "when": "$(basename).ts"
+    },
+    "**/.js.map": {
+      "when": "$(basename)"
+    }
+  },
+  "formattingToggle.activateFor": ["formatOnSave"],
+  "gitlens.advanced.telemetry.enabled": false,
+  "javascript.implicitProjectConfig.checkJs": true,
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.makeRoom",
+      "sequence": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.toggleActivityBarVisibility",
+        "workbench.action.toggleStatusbarVisibility"
+      ]
+    }
+  ],
+  "npm.enableScriptExplorer": true,
+  "npm.packageManager": "yarn",
+  "npm.scriptExplorerAction": "run",
+  "prettier.arrowParens": "avoid",
+  "prettier.bracketSpacing": true,
+  "prettier.disableLanguages": [],
+  "prettier.eslintIntegration": true,
+  "prettier.printWidth": 80,
+  "prettier.proseWrap": "preserve",
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.tslintIntegration": true,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "quokka.suppressExpirationNotifications": true,
+  "sync.autoUpload": true,
+  "sync.gist": "e08a12e80dcc8d7e181634fc62081f9a",
+  "sync.quietSync": true,
+  "telemetry.enableTelemetry": false,
+  "terminal.integrated.rendererType": "dom",
+  "versionlens.showDependencyStatusesAtStartup": true,
+  "versionlens.showVersionLensesAtStartup": false,
+  "vetur.completion.useScaffoldSnippets": false,
+  "vetur.validation.template": false,
+  "window.menuBarVisibility": "toggle",
+  "workbench.activityBar.visible": true,
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.statusBar.visible": true,
+  "zenMode.centerLayout": true
+}
